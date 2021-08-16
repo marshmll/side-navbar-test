@@ -1,0 +1,123 @@
+*, ::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  padding-left: 4rem;
+}
+
+.side-nav {
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  background: #336699;
+  animation: SideNavOut ease-in-out 500ms;
+  width: 4rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.side-nav--disabled {
+  animation: sideNavOut ease-in-out 500ms;
+  width: 4rem;
+}
+
+.side-nav--active {
+  animation: sideNavIn ease-in-out 500ms;
+  width: 12rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option span {
+  margin-left: 2.2rem;
+  color: white;
+  font-weight: 200;
+  cursor: default;
+}
+
+.button {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: block;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.button:hover {
+  background-color: #ffffff50;
+}
+
+.side-nav__trigger-btn {
+  background: url(./list.svg);
+  background-position: center;
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+}
+
+.search {
+  background: url(./search.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+}
+
+.user {
+  background: url(./person.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+}
+
+.messages {
+  background: url(./chat-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+}
+
+.files {
+  background: url(./folder.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+}
+
+.settings {
+  background: url(./gear.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+}
+
+.logout {
+  background: url(./box-arrow-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  margin: 6rem 0;
+}
+
+@keyframes sideNavIn {
+  from {
+    width: 4rem;
+  }
+}
+
+@keyframes sideNavOut {
+  from {
+    width: 12rem;
+  }
+}
